@@ -28,16 +28,16 @@ export function AuthProvider({ children }) {
     return auth.sendPasswordResetEmail(email)
   }
 
-  function updateProfile(user){
-    return auth.updateCurrentUser(user)
-  }
-
   function updateEmail(email){
     return currentUser.updateEmail(email)
   }
 
   function updatePassword(password){
     return currentUser.updatePassword(password)
+  }
+
+  function updateProfile(user){
+    return auth.updateCurrentUser(user)
   }
 
   useEffect(() => {
